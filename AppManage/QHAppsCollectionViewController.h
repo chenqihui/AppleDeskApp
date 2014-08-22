@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface QHAppsCollectionViewController : UIViewController
+@interface QHAppsCollectionViewController : QHBasicViewController
 
 @end

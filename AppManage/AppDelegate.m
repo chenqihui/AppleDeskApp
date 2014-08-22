@@ -10,10 +10,12 @@
 
 #import "ViewController.h"
 #import "AppsMainViewController.h"
+#import "QHAppsCollectionViewController.h"
 
 @interface AppDelegate ()
 {
     AppsMainViewController *_appsMainVC;
+    QHAppsCollectionViewController *_appsColletionVC;
 }
 
 @end
@@ -37,8 +39,9 @@
 //    self.viewController = [[ViewController alloc] initWithNibName:@"ViewController" bundle:nil];
 //    self.window.rootViewController = self.viewController;
     
-    _appsMainVC = [[AppsMainViewController alloc] init];
-    self.window.rootViewController = _appsMainVC;
+//    _appsMainVC = [[AppsMainViewController alloc] init];
+    _appsColletionVC = [[QHAppsCollectionViewController alloc] init];
+    self.window.rootViewController = _appsColletionVC;
     
     [self.window makeKeyAndVisible];
     

@@ -20,6 +20,9 @@
 		741F1B9F17562E7700952E80 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 741F1B9D17562E7700952E80 /* ViewController.xib */; };
 		741F1BAA175633E400952E80 /* AppButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 741F1BA9175633E400952E80 /* AppButton.m */; };
 		741F1BAF175642C100952E80 /* deleteTag.png in Resources */ = {isa = PBXBuildFile; fileRef = 741F1BAE175642C100952E80 /* deleteTag.png */; };
+		74472C2A19A6E21E0001F6EE /* QHAppsCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 74472C2919A6E21E0001F6EE /* QHAppsCollectionViewCell.m */; };
+		74472C3019A6F43B0001F6EE /* AppsDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 74472C2F19A6F43B0001F6EE /* AppsDataSource.m */; };
+		74472C3619A708B80001F6EE /* SimpleAppData.m in Sources */ = {isa = PBXBuildFile; fileRef = 74472C3519A708B80001F6EE /* SimpleAppData.m */; };
 		74564B1D19A5B80300ED5D3A /* QHCommonUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 74564B1619A5B80300ED5D3A /* QHCommonUtil.m */; };
 		74564B1E19A5B80300ED5D3A /* QHBasicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74564B1A19A5B80300ED5D3A /* QHBasicViewController.m */; };
 		74564B1F19A5B80300ED5D3A /* UIView+KGViewExtend.m in Sources */ = {isa = PBXBuildFile; fileRef = 74564B1C19A5B80300ED5D3A /* UIView+KGViewExtend.m */; };
@@ -49,6 +52,13 @@
 		741F1BA8175633E400952E80 /* AppButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppButton.h; sourceTree = "<group>"; };
 		741F1BA9175633E400952E80 /* AppButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppButton.m; sourceTree = "<group>"; };
 		741F1BAE175642C100952E80 /* deleteTag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = deleteTag.png; sourceTree = "<group>"; };
+		74472C2819A6E21E0001F6EE /* QHAppsCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QHAppsCollectionViewCell.h; sourceTree = "<group>"; };
+		74472C2919A6E21E0001F6EE /* QHAppsCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QHAppsCollectionViewCell.m; sourceTree = "<group>"; };
+		74472C2E19A6F43B0001F6EE /* AppsDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppsDataSource.h; sourceTree = "<group>"; };
+		74472C2F19A6F43B0001F6EE /* AppsDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppsDataSource.m; sourceTree = "<group>"; };
+		74472C3119A6F5540001F6EE /* AppObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppObject.h; sourceTree = "<group>"; };
+		74472C3419A708B80001F6EE /* SimpleAppData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleAppData.h; sourceTree = "<group>"; };
+		74472C3519A708B80001F6EE /* SimpleAppData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleAppData.m; sourceTree = "<group>"; };
 		74564B1519A5B80300ED5D3A /* QHCommonUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QHCommonUtil.h; sourceTree = "<group>"; };
 		74564B1619A5B80300ED5D3A /* QHCommonUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QHCommonUtil.m; sourceTree = "<group>"; };
 		74564B1719A5B80300ED5D3A /* QHViewTag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QHViewTag.h; sourceTree = "<group>"; };
@@ -121,8 +131,15 @@
 				74564B2419A5C99C00ED5D3A /* AppsMainViewController.m */,
 				74AB3E9119A60E2900981B15 /* QHAppsCollectionViewController.h */,
 				74AB3E9219A60E2900981B15 /* QHAppsCollectionViewController.m */,
+				74472C2E19A6F43B0001F6EE /* AppsDataSource.h */,
+				74472C2F19A6F43B0001F6EE /* AppsDataSource.m */,
 				74564B2019A5C97400ED5D3A /* QHCollectionViewLayout.h */,
 				74564B2119A5C97400ED5D3A /* QHCollectionViewLayout.m */,
+				74472C2819A6E21E0001F6EE /* QHAppsCollectionViewCell.h */,
+				74472C2919A6E21E0001F6EE /* QHAppsCollectionViewCell.m */,
+				74472C3119A6F5540001F6EE /* AppObject.h */,
+				74472C3419A708B80001F6EE /* SimpleAppData.h */,
+				74472C3519A708B80001F6EE /* SimpleAppData.m */,
 				741F1B8917562E7600952E80 /* Supporting Files */,
 			);
 			path = AppManage;
@@ -260,8 +277,11 @@
 				741F1B9C17562E7700952E80 /* ViewController.m in Sources */,
 				741F1BAA175633E400952E80 /* AppButton.m in Sources */,
 				74564B2819A5CB3E00ED5D3A /* QHAppsButton.m in Sources */,
+				74472C2A19A6E21E0001F6EE /* QHAppsCollectionViewCell.m in Sources */,
 				74564B1E19A5B80300ED5D3A /* QHBasicViewController.m in Sources */,
+				74472C3619A708B80001F6EE /* SimpleAppData.m in Sources */,
 				74564B1D19A5B80300ED5D3A /* QHCommonUtil.m in Sources */,
+				74472C3019A6F43B0001F6EE /* AppsDataSource.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

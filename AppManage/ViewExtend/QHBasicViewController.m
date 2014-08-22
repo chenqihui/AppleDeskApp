@@ -36,13 +36,13 @@
 {
     [super viewDidLoad];
     
-    self.view.backgroundColor = RGBA(236.f, 236.f, 236.f, 1);
+//    self.view.backgroundColor = RGBA(236.f, 236.f, 236.f, 1);
     _statusBarView = [[UIImageView alloc] initWithFrame:CGRectMake(0.f, 0.f, 320, 0.f)];
     if (isIos7 >= 7 && __IPHONE_OS_VERSION_MAX_ALLOWED > __IPHONE_6_1)
     {
         _statusBarView.frame = CGRectMake(_statusBarView.frame.origin.x, _statusBarView.frame.origin.y, _statusBarView.frame.size.width, 20.f);
         _statusBarView.backgroundColor = [UIColor clearColor];
-        ((UIImageView *)_statusBarView).backgroundColor = RGBA(247,247,247,1);
+//        ((UIImageView *)_statusBarView).backgroundColor = RGBA(247,247,247,1);
         [self.view addSubview:_statusBarView];
         //[[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent animated:NO];
     }
