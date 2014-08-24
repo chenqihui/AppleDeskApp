@@ -62,6 +62,13 @@
     return _arData[indexPath.item];
 }
 
+- (int)deleteAtIndexPath:(NSIndexPath *)indexPath
+{
+    [_arData removeObjectAtIndex:indexPath.row];
+    
+    return indexPath.row;
+}
+
 #pragma mark - UICollectionViewDataSource
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section

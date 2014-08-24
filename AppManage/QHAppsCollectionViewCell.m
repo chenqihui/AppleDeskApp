@@ -40,13 +40,13 @@
 - (void)setup
 {
     _nSpaceX = 10;
-    _nSpaceY = 5;
+    _nSpaceY = 10;
     
 //    [self.contentView setFrame:CGRectMake(_nSpaceX, _nSpaceY, self.contentView.frame.size.width - 2 * _nSpaceX, self.contentView.frame.size.height - 2 * _nSpaceY)];
     
     _iconImageView = [[UIImageView alloc] init];
     [_iconImageView setBackgroundColor:[UIColor greenColor]];
-    [self setView:_iconImageView];
+    [QHCommonUtil setView:_iconImageView];
     [self.contentView addSubview:_iconImageView];
     
     _iconTitleLabel = [[UILabel alloc] init];
@@ -55,6 +55,18 @@
     [_iconTitleLabel setFont:[UIFont boldSystemFontOfSize:13]];
     [_iconTitleLabel setTextColor:[UIColor whiteColor]];
     [self.contentView addSubview:_iconTitleLabel];
+    
+    _deleteView = [[UIImageView alloc] init];
+    [_deleteView setImage:[UIImage imageNamed:@"deleteTag.png"]];
+    _deleteView.tag = APP_DELETE_TAG;
+    [self.contentView addSubview:_deleteView];
+    [_deleteView setHidden:YES];
+    [_deleteView setUserInteractionEnabled:YES];
+    
+    UITapGestureRecognizer *tapGestureTel = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(deletePressGestureRecognizer:)];
+    [tapGestureTel setNumberOfTapsRequired:1];
+    [tapGestureTel setNumberOfTouchesRequired:1];
+    [_deleteView addGestureRecognizer:tapGestureTel];
 }
 
 - (void)layoutSubviews
@@ -62,16 +74,18 @@
     float width = MIN(self.contentView.frame.size.width - _nSpaceX * 2, self.contentView.frame.size.width - _nSpaceY * 2);
     [_iconImageView setFrame:CGRectMake(_nSpaceX, _nSpaceY, width, width)];
     [_iconTitleLabel setFrame:CGRectMake(0, CGRectGetMaxY(_iconImageView.frame), self.contentView.frame.size.width, (self.contentView.frame.size.height - CGRectGetMaxY(_iconImageView.frame)))];
+    float nDeleteW = 20;
+    [_deleteView setFrame:CGRectMake(0, 0, nDeleteW, nDeleteW)];
 }
 
-- (void)setView:(UIView *)view
+#pragma mark - action
+
+-(void)deletePressGestureRecognizer:(UIGestureRecognizer *)gr
 {
-    //设置圆角度数
-    view.layer.cornerRadius = 12;
-    //设置边框的宽度
-    view.layer.borderWidth = 1;
-    //设置边框颜色
-    view.layer.borderColor = [[UIColor whiteColor] CGColor];
+    if ([_delegate respondsToSelector:@selector(deleteAppsCell:)])
+    {
+        [_delegate deleteAppsCell:self];
+    }
 }
 
 @end

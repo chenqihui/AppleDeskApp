@@ -29,6 +29,10 @@
 		74564B2219A5C97400ED5D3A /* QHCollectionViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 74564B2119A5C97400ED5D3A /* QHCollectionViewLayout.m */; };
 		74564B2519A5C99C00ED5D3A /* AppsMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74564B2419A5C99C00ED5D3A /* AppsMainViewController.m */; };
 		74564B2819A5CB3E00ED5D3A /* QHAppsButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 74564B2719A5CB3E00ED5D3A /* QHAppsButton.m */; };
+		7477241B19AA0EAB0002BA70 /* QHDialogView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7477241A19AA0EAB0002BA70 /* QHDialogView.m */; };
+		7477241E19AA0ED70002BA70 /* dll_dialog_cancel_highlight.png in Resources */ = {isa = PBXBuildFile; fileRef = 7477241C19AA0ED70002BA70 /* dll_dialog_cancel_highlight.png */; };
+		7477241F19AA0ED70002BA70 /* dll_dialog_cancel_normal.png in Resources */ = {isa = PBXBuildFile; fileRef = 7477241D19AA0ED70002BA70 /* dll_dialog_cancel_normal.png */; };
+		7477242119AA16610002BA70 /* dll_dialog_know_highlight.png in Resources */ = {isa = PBXBuildFile; fileRef = 7477242019AA16610002BA70 /* dll_dialog_know_highlight.png */; };
 		74AB3E9319A60E2900981B15 /* QHAppsCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74AB3E9219A60E2900981B15 /* QHAppsCollectionViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -72,6 +76,11 @@
 		74564B2419A5C99C00ED5D3A /* AppsMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppsMainViewController.m; sourceTree = "<group>"; };
 		74564B2619A5CB3E00ED5D3A /* QHAppsButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QHAppsButton.h; sourceTree = "<group>"; };
 		74564B2719A5CB3E00ED5D3A /* QHAppsButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QHAppsButton.m; sourceTree = "<group>"; };
+		7477241919AA0EAB0002BA70 /* QHDialogView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QHDialogView.h; sourceTree = "<group>"; };
+		7477241A19AA0EAB0002BA70 /* QHDialogView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QHDialogView.m; sourceTree = "<group>"; };
+		7477241C19AA0ED70002BA70 /* dll_dialog_cancel_highlight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dll_dialog_cancel_highlight.png; sourceTree = "<group>"; };
+		7477241D19AA0ED70002BA70 /* dll_dialog_cancel_normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dll_dialog_cancel_normal.png; sourceTree = "<group>"; };
+		7477242019AA16610002BA70 /* dll_dialog_know_highlight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dll_dialog_know_highlight.png; sourceTree = "<group>"; };
 		74AB3E9119A60E2900981B15 /* QHAppsCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QHAppsCollectionViewController.h; sourceTree = "<group>"; };
 		74AB3E9219A60E2900981B15 /* QHAppsCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QHAppsCollectionViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -168,6 +177,8 @@
 				741F1BA9175633E400952E80 /* AppButton.m */,
 				74564B2619A5CB3E00ED5D3A /* QHAppsButton.h */,
 				74564B2719A5CB3E00ED5D3A /* QHAppsButton.m */,
+				7477241919AA0EAB0002BA70 /* QHDialogView.h */,
+				7477241A19AA0EAB0002BA70 /* QHDialogView.m */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -175,6 +186,9 @@
 		741F1BAB17563A9D00952E80 /* image */ = {
 			isa = PBXGroup;
 			children = (
+				7477241C19AA0ED70002BA70 /* dll_dialog_cancel_highlight.png */,
+				7477241D19AA0ED70002BA70 /* dll_dialog_cancel_normal.png */,
+				7477242019AA16610002BA70 /* dll_dialog_know_highlight.png */,
 				741F1BAE175642C100952E80 /* deleteTag.png */,
 			);
 			name = image;
@@ -256,6 +270,9 @@
 				741F1B9517562E7700952E80 /* Default.png in Resources */,
 				741F1B9717562E7700952E80 /* Default@2x.png in Resources */,
 				741F1B9917562E7700952E80 /* Default-568h@2x.png in Resources */,
+				7477242119AA16610002BA70 /* dll_dialog_know_highlight.png in Resources */,
+				7477241E19AA0ED70002BA70 /* dll_dialog_cancel_highlight.png in Resources */,
+				7477241F19AA0ED70002BA70 /* dll_dialog_cancel_normal.png in Resources */,
 				741F1B9F17562E7700952E80 /* ViewController.xib in Resources */,
 				741F1BAF175642C100952E80 /* deleteTag.png in Resources */,
 			);
@@ -273,6 +290,7 @@
 				741F1B8F17562E7600952E80 /* main.m in Sources */,
 				741F1B9317562E7700952E80 /* AppDelegate.m in Sources */,
 				74AB3E9319A60E2900981B15 /* QHAppsCollectionViewController.m in Sources */,
+				7477241B19AA0EAB0002BA70 /* QHDialogView.m in Sources */,
 				74564B2519A5C99C00ED5D3A /* AppsMainViewController.m in Sources */,
 				741F1B9C17562E7700952E80 /* ViewController.m in Sources */,
 				741F1BAA175633E400952E80 /* AppButton.m in Sources */,

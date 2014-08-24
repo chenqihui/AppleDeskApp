@@ -19,4 +19,18 @@
 //根据比例（0...1）在min和max中取值
 + (float)lerp:(float)percent min:(float)nMin max:(float)nMax;
 
++ (void)setView:(UIView *)view;
+
++ (void)setView:(UIView *)view cornerRadius:(float)nCornerRadius borderWidth:(float)nBorderWidth borderColor:(UIColor *)borderColor;
+
++ (void)BeginWobble:(UIView *)mainView;
+
++ (void)EndWobble:(UIView *)mainView;
+
++ (UIColor *) stringTOColor:(NSString *)str;
+
++ (CGSize)getSizeWithFont:(UIFont *)font;
+
++ (CGSize)getSizeWithString:(NSString *)str withFont:(UIFont *)font;
+
 @end

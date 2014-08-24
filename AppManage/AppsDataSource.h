@@ -19,4 +19,6 @@ typedef void (^ConfigureCellBlock)(QHAppsCollectionViewCell *cell, NSIndexPath *
 
 - (id<AppObject>)eventAtIndexPath:(NSIndexPath *)indexPath;
 
+- (int)deleteAtIndexPath:(NSIndexPath *)indexPath;
+
 @end

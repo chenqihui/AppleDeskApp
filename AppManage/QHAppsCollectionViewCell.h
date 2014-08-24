@@ -9,10 +9,22 @@
 #import <UIKit/UIKit.h>
 
 #define COLLECTIONVIEWCELL  @"collectionviewcell"
+#define APP_DELETE_TAG 946
+
+@class QHAppsCollectionViewCell;
+
+@protocol QHAppsCollectionViewCellDelegate <NSObject>
+
+- (void)deleteAppsCell:(QHAppsCollectionViewCell *)collectionViewCell;
+
+@end
 
 @interface QHAppsCollectionViewCell : UICollectionViewCell
 
 @property (nonatomic, strong) UILabel *iconTitleLabel;
 @property (nonatomic, strong) UIImageView *iconImageView;
+@property (nonatomic, strong) UIImageView *deleteView;
+
+@property (nonatomic, weak) id<QHAppsCollectionViewCellDelegate> delegate;
 
 @end
